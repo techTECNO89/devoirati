@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo_v.png" type="image/png">
+    <title>Devoirati Tunisia: Subjects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subject-content { display: none; }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-storage-compat.js"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7273652563287776"
+     crossorigin="anonymous"></script>
+    <div class="main">
+        <div class="navbar">
+            <img src="images/logo.PNG" alt="Devoirati Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ad" id="rightAd">
+            <ins class="adsbygoogle"
+                 style="display:block; width: 728px; height: 90px;"
+                 data-ad-client="ca-pub-7273652563287776"
+                 data-ad-slot="1234567890"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section class="subjects-container">
+            <div class="subject" id="maths" onclick="showContent('maths-content')">
+                <img src="images/subjects/maths.png" alt="maths logo" class="subject-image">
+                <h3>Math</h3>
+                <p class="subject-classes">Classes: 2nd seconadry education (secience)</p>
+                <p class="subject-classes">         1st seconadry education</p>
+                <p class="subject-devoirs">Total Files: 4</p>
+            </div>
+            <div class="subject" id="physics" onclick="showContent('physics-content')">
+                <img src="images/subjects/physics.png" alt="physics logo" class="subject-image">
+                <h3>Physics</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="science" onclick="showContent('science-content')">
+                <img src="images/subjects/science.png" alt="science logo" class="subject-image">
+                <h3>Science</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="chemistry" onclick="showContent('chemistry-content')">
+                <img src="images/subjects/chemic.png" alt="chemistry logo" class="subject-image">
+                <h3>Chemistry</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="french" onclick="showContent('french-content')">
+                <img src="images/subjects/french.png" alt="french logo" class="subject-image">
+                <h3>French</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="english" onclick="showContent('english-content')">
+                <img src="images/subjects/english.png" alt="english logo" class="subject-image">
+                <h3>English</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="history" onclick="showContent('history-content')">
+                <img src="images/subjects/history.png" alt="history logo" class="subject-image">
+                <h3>History</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="informatics" onclick="showContent('informatics-content')">
+                <img src="images/subjects/informatic.png" alt="informatics logo" class="subject-image">
+                <h3>Informatics</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+            <div class="subject" id="technology" onclick="showContent('technology-content')">
+                <img src="images/subjects/technology.png" alt="technology logo" class="subject-image">
+                <h3>Technology</h3>
+                <p class="subject-classes">Classes: </p>
+                <p class="subject-devoirs">Total Files: 0</p>
+            </div>
+        </section>
+
+        <section class="subject-content" id="maths-content">
+            <div class="file-content">
+
+                <!-- 1 st secondary -->
+
+                <div class="class">
+                    <div class="class-text">
+                        <h2>1st seconadry education</h2>
+                    </div>
+                </div>
+                <div class="files" data-price="free" onclick="openModal('theoreme_de_thales.pdf', this)">
+                    <img src="images/pdf.png" alt="Devoir Icon">
+                    <div class="files-text">
+                        <h2>File 1: Théorème de Thales</h2>
+                        <p>Creator: Professor Mohammed .H</p>
+                        <p>Price: Free</p>
+                    </div>
+                </div>
+
+                <!-- 2 nd secondary  'Secience' -->
+
+
+                <div class="class">
+                    <div class="class-text">
+                        <h2>2nd seconadry education: section secience</h2>
+                    </div>
+                </div>
+                <div class="files" data-price="free" onclick="openModal('calculs_vectoriels.pdf', this)">
+                    <img src="images/pdf.png" alt="Devoir Icon">
+                    <div class="files-text">
+                        <h2>File 1: Calculs Vectoriels</h2>
+                        <p>Creator: Devoirati</p>
+                        <p>Price: Free</p>
+                    </div>
+                </div>
+                <div class="files" data-price="free" onclick="openModal('problemes_du_second_degree.pdf', this)">
+                    <img src="images/pdf.png" alt="Devoir Icon">
+                    <div class="files-text">
+                        <h2>File 2: Problèmes du second degrée</h2>
+                        <p>Creator: Devoirati</p>
+                        <p>Price: Free</p>
+                    </div>
+                </div>
+                <div class="files" data-price="free" onclick="openModal('problemes_du_second_degree_2.pdf', this)">
+                    <img src="images/pdf.png" alt="Devoir Icon">
+                    <div class="files-text">
+                        <h2>File 3: Problèmes du second degrée (Serie 2)</h2>
+                        <p>Creator: Devoirati</p>
+                        <p>Price: Free</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="physics-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="science-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="chemistry-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="french-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="english-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="history-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="informatics-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <section class="subject-content" id="technology-content">
+            <div class="file-content">
+
+                <h2>No devoirs yet</h2>
+
+
+            </div>
+        </section>
+
+        <div id="downloadModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-text">
+                    <h2 id="modalTitle">File Details</h2>
+                    <p id="modalCreator">Creator: </p>
+                    <p id="modalPrice">Price: Free</p>
+                </div>
+                <button id="downloadBtn" class="download-btn" onclick="downloadFile()">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Devoirati Tunisia. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><img src="images/social/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/social/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD_HcdKqPvo8ISZFZ44iGnE1ADhH8nGa-Q",
+            authDomain: "filesmanager-41b96.firebaseapp.com",
+            projectId: "filesmanager-41b96",
+            storageBucket: "filesmanager-41b96.appspot.com",
+            messagingSenderId: "1095479761545",
+            appId: "1:1095479761545:web:cbb1823d298876a8990458",
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+
+        let selectedFileName = '';
+
+        function downloadFile() {
+            if (!selectedFileName) {
+                console.error('No file selected for download.');
+                return;
+            }
+
+            const storageRef = storage.ref('series/' + selectedFileName);
+
+            storageRef.getDownloadURL().then(url => {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = selectedFileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }).catch(error => {
+                console.error('Error downloading file:', error);
+            });
+        }
+
+        function openModal(fileName, element) {
+            const title = element.querySelector('h2').innerText;
+            const creator = element.querySelector('p:nth-child(2)').innerText.split(': ')[1];
+        
+            selectedFileName = fileName;
+
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalCreator').innerText = `Creator: ${creator}`;
+
+            document.getElementById('downloadModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('downloadModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('downloadModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.subjects-container');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            const contentToShow = document.getElementById(contentId);
+            if (contentToShow) {
+                contentToShow.style.display = 'block';
+            } else {
+                console.error(`No content found with ID: ${contentId}`);
+            }
+        }
+
+    </script>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
