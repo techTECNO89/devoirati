@@ -96,6 +96,58 @@
         </div>
     </footer>
 
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD_HcdKqPvo8ISZFZ44iGnE1ADhH8nGa-Q",
+            authDomain: "filesmanager-41b96.firebaseapp.com",
+            projectId: "filesmanager-41b96",
+            storageBucket: "filesmanager-41b96.appspot.com",
+            messagingSenderId: "1095479761545",
+            appId: "1:1095479761545:web:cbb1823d298876a8990458",
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+
+        function showImages() {
+            const imgNames = ['chemic.png', 'civic.png', 'english.png', 'facebook.png', 'french.png', 'germany.png',
+                              'history.png', 'informatic.png', 'instagram.png', 'italy.png', 'logo_v.png', 'maths.png',
+                              'pdf.png', 'phyics.png', 'science.png', 'spanish.png', 'sports.png', 'technology.png'];
+            const imgIds = ['chemic', 'civic', 'english', 'facebook', 'french', 'germany', 'history', 'informatic',
+                            'instagram', 'italy', 'tab_icon', 'maths', 'pdf', 'physics', 'science', 'spanish', 'sports',
+                             'technology'];
+
+            imgNames.forEach((image, index) => {
+                const storageRef = storage.ref('images/' + image);
+                storageRef.getDownloadURL().then(url => {
+                    const imgId = imgIds[index];
+                    if (imgId) {
+                        const img = document.getElementById(imgId);
+                        if (img) {
+                            if (imgId === 'tab_icon') {
+                                img.href = url;
+                            } else {
+                                img.src = url;
+                            }
+                        } else {
+                            console.warn(Element with ID ${imgId} not found.);
+                        }
+                    }
+                }).catch(error => {
+                    console.error('Error fetching image', error);
+                });
+            });
+        }
+
+        showImages();
+
+    </script>
+
+
+
+
+
+
     <script src="scripts.js"></script>
 </body>
 </html>
