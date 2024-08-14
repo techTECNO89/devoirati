@@ -112,7 +112,7 @@
         function showImages() {
             const imgNames = ['chemic.png', 'civic.png', 'english.png', 'facebook.png', 'french.png', 'germany.png',
                               'history.png', 'informatic.png', 'instagram.png', 'italy.png', 'logo_v.png', 'maths.png',
-                              'pdf.png', 'phyics.png', 'science.png', 'spanish.png', 'sports.png', 'technology.png', 'logo.png'];
+                              'pdf.png', 'physics.png', 'science.png', 'spanish.png', 'sports.png', 'technology.png', 'logo.png'];
             const imgIds = ['chemic', 'civic', 'english', 'facebook', 'french', 'germany', 'history', 'informatic',
                             'instagram', 'italy', 'tab_icon', 'maths', 'pdf', 'physics', 'science', 'spanish', 'sports',
                              'technology', 'logo'];
@@ -130,7 +130,7 @@
                                 img.src = url;
                             }
                         } else {
-                            console.warn(Element with ID ${imgId} not found.);
+                            console.warn(`Element with ID ${imgId} not found.`);
                         }
                     }
                 }).catch(error => {
@@ -142,11 +142,6 @@
         showImages();
 
     </script>
-
-
-
-
-
 
     <script src="scripts.js"></script>
 </body>
